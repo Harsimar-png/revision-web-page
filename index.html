@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy — Study Smarter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home"><span class="logo">✦</span><span>StudyBuddy</span></a>
+      <form class="ai-search" id="ai-search-form" role="search">
+        <label class="sr-only" for="ai-search-input">Ask the AI tutor or search revision topics</label>
+        <span class="search-symbol" aria-hidden="true">⌕</span>
+        <input id="ai-search-input" name="question" type="search" placeholder="Ask AI or search GCSE topics..." autocomplete="off" required>
+        <button type="submit" aria-label="Ask the AI tutor">Ask AI ↗</button>
+      </form>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#quiz">Quiz demo</a>
+        <a href="#planner">Study plan</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="ai-answer-section" id="ai-tutor" aria-live="polite" hidden>
+      <div class="wrap">
+        <div class="ai-answer panel">
+          <div class="ai-answer-heading"><span class="ai-sparkle">✦</span><div><h2 id="ai-answer-title">Your AI tutor</h2><p id="ai-answer-status">Ask a GCSE revision question to get started.</p></div></div>
+          <div id="ai-answer-content" class="ai-answer-content"></div>
+          <div class="ai-answer-actions"><button type="button" class="btn secondary" id="clear-ai-answer">Clear answer</button></div>
+        </div>
+      </div>
+    </section>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">YOUR FRIENDLY STUDY SPACE ✨</span>
+          <h1>Study smarter,<br><span>not harder.</span></h1>
+          <p class="lead">A calm little corner of the internet for revision, flashcards, practice questions, and planning your next study session.</p>
+          <div class="actions"><a class="btn" href="#features">Explore features →</a><a class="btn secondary" href="#planner">View study plan</a></div>
+        </div>
+        <aside class="preview">
+          <div class="preview-top"><strong>✨ Your study dashboard</strong><span class="pill">You’ve got this</span></div>
+          <div class="mini-card"><strong>📚 Today's focus</strong><p>Review biology notes for 20 minutes.</p></div>
+          <div class="mini-row"><div class="stat"><strong>03</strong><span class="muted">Topics to review</span></div><div class="stat"><strong>15 min</strong><span class="muted">Suggested break</span></div></div>
+          <div class="mini-card"><strong>🌱 Tiny reminder</strong><p>Progress matters more than perfection.</p></div>
+        </aside>
+      </div>
+    </section>
+    <section id="features"><div class="wrap"><div class="section-head"><h2>Your study toolkit</h2><p>Simple tools to help you study in a way that feels manageable.</p></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">💡</div><h3>Topic explainers</h3><p>Read short, beginner-friendly explanations of tricky topics. This version uses example content.</p></article>
+        <article class="card"><div class="card-icon">🗂️</div><h3>Flashcards</h3><p>Click a card to reveal its answer, then edit the HTML to add your own.</p></article>
+        <article class="card"><div class="card-icon">📝</div><h3>Practice quiz</h3><p>Try a sample multiple-choice question and reveal the answer.</p></article>
+      </div>
+    </div></section>
+    <section id="flashcards" class="tinted"><div class="wrap"><div class="section-head"><h2>Flashcards</h2><p>Click a question to reveal the answer.</p></div>
+      <div class="cards flashcards">
+        <details><summary>What is photosynthesis?</summary><p>The process plants use to turn light energy, water, and carbon dioxide into sugar and oxygen.</p></details>
+        <details><summary>What is a metaphor?</summary><p>A figure of speech that describes one thing as another to suggest a similarity.</p></details>
+        <details><summary>What is a prime number?</summary><p>A whole number greater than 1 with exactly two positive factors: 1 and itself.</p></details>
+      </div>
+    </div></section>
+    <section id="quiz"><div class="wrap two-col"><div class="section-head"><h2>Quick quiz</h2><p>Choose an answer, then open “Check the answer.” This HTML-only demo does not calculate a score.</p></div>
+      <div class="panel quiz"><h3>Which planet is known as the Red Planet?</h3>
+        <label><input type="radio" name="planet"> Venus</label><label><input type="radio" name="planet"> Mars</label><label><input type="radio" name="planet"> Jupiter</label>
+        <details><summary>Check the answer</summary><p><strong>Mars.</strong> Iron-rich dust on its surface gives it a reddish appearance.</p></details>
+      </div>
+    </div></section>
+    <section id="planner" class="pink-tint"><div class="wrap two-col"><div class="section-head"><h2>A gentle study plan</h2><p>A sample plan you can customise by editing the HTML.</p></div>
+      <div class="panel"><h3>Today's mini plan 🌷</h3><ol><li>Spend 20 minutes reviewing one topic.</li><li>Take a 5-minute screen break.</li><li>Try three practice questions.</li><li>Write down one thing you learned.</li></ol><p class="note">Tip: Short, focused sessions and regular breaks can make revision feel less overwhelming.</p></div>
+    </div></section>
+    <section><div class="wrap section-head"><h2>Made for your next little win</h2><p>Start small, keep learning, and celebrate the progress you make.</p></div></section>
+  </main>
+  <footer><div class="wrap">Made with ✨ for curious minds · StudyBuddy</div></footer>
+  <script>
+    // Built-in starter knowledge means search can still help before you add your own resources.
+    // For open-ended questions, the secure backend provides real AI answers.
+    const resourceIndex = [
+      { title: "Photosynthesis", keywords: "biology plant light chlorophyll glucose oxygen carbon dioxide equation", text: "Photosynthesis is how plants use light energy to turn water and carbon dioxide into glucose and oxygen. Word equation: carbon dioxide + water → glucose + oxygen. Chlorophyll absorbs light. Factors affecting rate include light intensity, carbon dioxide concentration and temperature." },
+      { title: "Cell biology: mitosis", keywords: "biology cells division chromosomes growth repair", text: "Mitosis makes two genetically identical daughter cells. The chromosomes are copied, line up in the middle, and are separated so each new cell receives the same genetic information. Mitosis is used for growth and repair." },
+      { title: "Respiration", keywords: "biology aerobic anaerobic energy glucose oxygen mitochondria", text: "Respiration releases energy from glucose. Aerobic respiration uses oxygen: glucose + oxygen → carbon dioxide + water. Anaerobic respiration releases less energy and happens without oxygen." },
+      { title: "Atomic structure", keywords: "chemistry atom proton neutron electron nucleus isotope", text: "Atoms contain protons and neutrons in the nucleus, with electrons around it. Protons have a +1 charge, neutrons have no charge, and electrons have a −1 charge. Atomic number is the number of protons; mass number is protons plus neutrons." },
+      { title: "Chemical bonding", keywords: "chemistry ionic covalent metallic ions electrons", text: "Ionic bonding involves electron transfer and attraction between oppositely charged ions. Covalent bonding involves shared pairs of electrons. Metallic bonding is the attraction between positive metal ions and delocalised electrons." },
+      { title: "Forces and motion", keywords: "physics speed distance time velocity acceleration resultant force", text: "Speed = distance ÷ time. A resultant force causes a change in motion: it can make an object accelerate, decelerate or change direction. On a distance–time graph, the gradient represents speed." },
+      { title: "Electricity", keywords: "physics current voltage resistance circuit ohms law", text: "Current is the rate of flow of charge. Potential difference is energy transferred per unit charge. Resistance = potential difference ÷ current (R = V ÷ I). In a series circuit, current is the same everywhere." },
+      { title: "Fractions, percentages and ratios", keywords: "maths fraction percentage ratio proportion", text: "To find a percentage of an amount, convert the percentage to a decimal and multiply. To simplify a ratio, divide every part by the same highest common factor. Keep units consistent in ratio problems." },
+      { title: "Quadratic equations", keywords: "maths algebra quadratic factorise roots formula", text: "A quadratic equation has an x² term, for example ax² + bx + c = 0. You may solve it by factorising, completing the square or using the quadratic formula. Check solutions by substituting them into the original equation." },
+      { title: "Metaphors", keywords: "english language paper poetry figurative language simile", text: "A metaphor describes one thing as if it were another to suggest a similarity. In an English answer, identify the image, select a short quotation, and explain the effect it creates for the reader. A simile usually uses 'like' or 'as'." },
+      { title: "Essay analysis", keywords: "english literature language quote analysis structure writer effect", text: "A useful paragraph structure is point, evidence, analysis. Make a clear point, include a short quotation, then analyse a specific word or technique and explain how it supports your interpretation. Link back to the question." },
+      { title: "Prime numbers", keywords: "maths factors number prime", text: "A prime number is a whole number greater than 1 with exactly two positive factors: 1 and itself. For example, 2, 3, 5 and 7 are prime. The number 1 is not prime." },
+      { title: "Red Planet", keywords: "science space astronomy mars planet", text: "Mars is known as the Red Planet because iron-rich dust on its surface gives it a reddish appearance." },
+      { title: "Revision planning", keywords: "revision timetable planning breaks focus study plan", text: "Choose one specific topic, revise it in a short focused session, then test yourself from memory with practice questions or flashcards. Review difficult topics again later. Use your exam board specification to check what you need to know." }
+    ];
+    const form = document.getElementById("ai-search-form");
+    const input = document.getElementById("ai-search-input");
+    const section = document.getElementById("ai-tutor");
+    const title = document.getElementById("ai-answer-title");
+    const status = document.getElementById("ai-answer-status");
+    const content = document.getElementById("ai-answer-content");
+    const clearButton = document.getElementById("clear-ai-answer");
+
+    function showAnswer(heading, message, paragraphs = []) {
+      section.hidden = false;
+      title.textContent = heading;
+      status.textContent = message;
+      content.replaceChildren();
+      paragraphs.forEach(text => {
+        const p = document.createElement("p");
+        p.textContent = text;
+        content.appendChild(p);
+      });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function findResources(question) {
+      const words = question.toLowerCase().match(/[a-z0-9]+/g) || [];
+      const stopWords = new Set(["what", "is", "are", "the", "a", "an", "how", "do", "does", "explain", "tell", "me", "about", "please", "gcse", "i", "to", "of", "and", "in", "for", "can", "you"]);
+      const terms = words.filter(word => !stopWords.has(word));
+      return resourceIndex.map(item => {
+        const haystack = (item.title + " " + item.keywords + " " + item.text).toLowerCase();
+        const score = terms.reduce((total, term) => total + (haystack.includes(term) ? (item.title.toLowerCase().includes(term) ? 3 : 1) : 0), 0);
+        return { item, score };
+      }).filter(result => result.score > 0).sort((a, b) => b.score - a.score).slice(0, 3).map(result => result.item);
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const question = input.value.trim();
+      if (!question) return;
+      const matches = findResources(question);
+      showAnswer("StudyBuddy AI tutor", "Working on your question…", ["Checking the AI tutor connection."]);
+      const askButton = form.querySelector("button[type=submit]");
+      askButton.disabled = true;
+      askButton.textContent = "Thinking…";
+      try {
+        const response = await fetch("/api/tutor", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || "The AI server isn't ready yet.");
+        showAnswer("Your AI tutor", "GCSE revision help · Check important facts against your class notes.", [data.answer || "I couldn't generate an answer just now. Please try again."]);
+      } catch (error) {
+        if (matches.length) {
+          showAnswer("StudyBuddy revision help", "The live AI tutor isn't connected yet, so here's a built-in GCSE explanation to get you started.", matches.map(item => item.title + ": " + item.text).concat(["For answers to any question, run the included server and configure an OpenAI API key securely."]));
+        } else {
+          showAnswer("Connect your AI tutor", "Your website doesn't need your own notes for the AI tutor to answer questions. It does need the secure AI server to be running.", ["If you opened index.html by double-clicking it, the AI connection won't work. Start the website using the included Node.js server, and set OPENAI_API_KEY on that server.", "You can try a built-in topic such as photosynthesis, mitosis, atomic structure, electricity, quadratic equations or metaphors while you set it up.", "Connection detail: " + (error.message || "The server could not be reached.")]);
+        }
+      } finally {
+        askButton.disabled = false;
+        askButton.textContent = "Ask AI ↗";
+      }
+    });
+    clearButton.addEventListener("click", () => {
+      section.hidden = true;
+      content.replaceChildren();
+      input.focus();
+    });
+  </script>
+</body>
+</html>
